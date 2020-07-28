@@ -68,11 +68,14 @@
 
 	CacheMaintenanceLib|MdePkg/Library/BaseCacheMaintenanceLib/BaseCacheMaintenanceLib.inf 
 
+	
+
 [Components]
 	TinyToolPkg/HelloWorld/HelloWorld.inf
 	TinyToolPkg/OUTB/outb.inf
 	TinyToolPkg/INB/inb.inf
 	TinyToolPkg/RDMSR/rdmsr.inf
+	TinyToolPkg/WRMSR/wrmsr.inf
 
 [BuildOptions]
 	# [$(compiler)]:[$(Target)]_[$(Tool)]_[$(Arch)]_[CC|DLINK]_FLAGS =
