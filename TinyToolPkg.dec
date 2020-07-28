@@ -1,0 +1,26 @@
+[Defines]
+  DEC_SPECIFICATION              = 0x00010006
+  PACKAGE_NAME                   = TinyToolPkg
+  PACKAGE_GUID                   = B3E3D3D5-D62B-4497-A175-264F489D127E
+  PACKAGE_VERSION                = 0.01
+
+
+[Includes]
+  MdePkg/Include
+
+[Includes.IA32]
+
+
+[Includes.X64]
+
+
+[LibraryClasses]
+
+
+[Guids]
+
+
+[PcdsFixedAtBuild]
+
+
+[Protocols]
