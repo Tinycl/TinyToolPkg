@@ -1,0 +1,42 @@
+[Defines]
+	INF_VERSION				= 0x00010006
+	BASE_NAME				= rmwmsr
+	FILE_GUID				= a912f198-7f0e-4803-b908-b757b806ec83
+	MODULE_TYPE				= UEFI_APPLICATION
+	VERSION_STRING			= 0.1
+	ENTRY_POINT				= ShellCEntryLib
+
+[Sources]
+	rmwmsr.c
+
+
+
+[Packages]
+	MdePkg/MdePkg.dec
+	MdeModulePkg/MdeModulePkg.dec
+	ShellPkg/ShellPkg.dec
+	StdLib/StdLib.dec
+
+
+[LibraryClasses]
+	LibC
+	LibStdio
+	LibStdLib
+	ShellCEntryLib
+	UefiLib
+	UefiBootServicesTableLib
+	IoLib
+	
+[Protocols]
+	gEfiMpServiceProtocolGuid
+
+
+[BuildOptions]
+	# [$(compiler)]:[$(Target)]_[$(Tool)]_[$(Arch)]_[CC|DLINK]_FLAGS =
+	# $(compiler) = INTEL MSFT GCC RVCT
+	# $(Target) = DEBUG RELEASE
+	# $(Tool) = VS2012  GCC44
+	# $(Arch) = IA32 X64 ARM IPF
+
+	GCC:*_*_*_CC_FLAGS = -Wno-unused-variable  -Wno-unused-but-set-variable
+	GCC:*_*_*_DLINK_FLAGS = -Wno-unused-variable -Wno-unused-but-set-variable
